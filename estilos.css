@@ -1,0 +1,118 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 10;
+  padding: 10;
+}
+
+nav {
+  background: #005a8d;
+  padding: 10px 20px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.nav-logo {
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-menu li a,
+.nav-menu select {
+  color: white;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.nav-menu select {
+  background: #0077b6;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.encabezado-logos {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  padding: 20px;
+}
+
+.programas{
+  padding-left: 140px;
+}
+
+.ponentes{
+  padding-left: 140px;
+}
+
+.evaluaciones{
+  padding-left: 140px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas de igual tamaño */
+  gap: 20px; /* Espacio entre elementos de la cuadrícula */
+}
+
+.grid-item {
+  border: 1px solid #ccc; /* Borde para ver los límites de la cuadrícula */
+  padding: 10px;
+  text-align: center; /* Centrar imagen y texto dentro de cada celda */
+}
+
+.grid-image {
+  max-width: 100%; /* Asegura que la imagen no exceda el ancho de la celda */
+  height: auto; /* Mantiene la proporción de la imagen */
+  margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.grid-text {
+  font-size: 14px;
+}
+
+.logo-jornadas,
+.logo-institucionales {
+  height: 90px;
+}
+
+main {
+  padding: 20px;
+}
+
+footer {
+  background: #005a8d;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
