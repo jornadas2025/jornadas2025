@@ -10,11 +10,20 @@ body {
   background: #f8f9fa;
   color: #333;
   line-height: 1.6;
+  padding-top: 180px; /* Altura combinada del header + nav */
 }
 
+/* ENCABEZADO */
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
   background-color: #fff;
+  z-index: 1000;
   padding: 1rem;
+  border-bottom: 1px solid #ccc;
   text-align: center;
 }
 
@@ -24,26 +33,38 @@ header {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  height: 100%;
 }
 
 .logo-jornadas, .logo-institucionales {
-  max-width: 100%;
+  max-height: 100%;
   height: auto;
+  max-width: 45%;
 }
 
+section {
+  scroll-margin-top: 200px; /* evita que el nav fijo tape la sección */
+}
+
+/* NAVEGACIÓN */
 nav {
+  position: fixed;
+  top: 120px; /* Debajo del header */
+  width: 100%;
+  height: 60px;
   background: #005a8d;
   color: white;
+  z-index: 999;
 }
 
 .nav-container {
   max-width: 960px;
+  height: 100%;
   margin: auto;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 0 1rem;
 }
 
 .nav-menu {
@@ -57,14 +78,17 @@ nav {
   margin: 0;
 }
 
-.nav-menu a, .nav-menu select {
+.nav-menu a,
+.nav-menu select {
   color: white;
   text-decoration: none;
   font-weight: bold;
   background: transparent;
   border: none;
+  font-size: 1rem;
 }
 
+/* CONTENIDO */
 main {
   max-width: 960px;
   margin: auto;
@@ -73,6 +97,7 @@ main {
 
 section {
   margin-bottom: 2rem;
+  padding: 1rem;
 }
 
 h2 {
@@ -102,6 +127,7 @@ ul li a:hover {
   text-decoration: underline;
 }
 
+/* PIE DE PÁGINA */
 footer {
   text-align: center;
   padding: 1rem;
@@ -109,11 +135,13 @@ footer {
   color: white;
 }
 
-/* diaeño responsivo */
+/* RESPONSIVO */
 @media (max-width: 768px) {
   .nav-container {
     flex-direction: column;
     align-items: flex-start;
+    height: auto;
+    padding: 0.5rem 1rem;
   }
 
   .nav-menu {
@@ -128,9 +156,18 @@ footer {
   .logo-jornadas, .logo-institucionales {
     width: 90%;
   }
+
+  nav {
+    height: auto;
+    padding: 0.5rem 0;
+  }
+
+  body {
+    padding-top: 220px; /* Más espacio en móviles por contenido vertical */
+  }
 }
 
-
+/* TARJETAS DE PONENTES */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -163,4 +200,3 @@ footer {
 .grid-text a:hover {
   text-decoration: underline;
 }
-
