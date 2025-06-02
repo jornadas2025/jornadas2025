@@ -167,7 +167,7 @@ footer {
 /* RESPONSIVO */
 @media (max-width: 768px) {
   body {
-    padding-top: 240px; /* más espacio si header/nav son más altos en móvil */
+    padding-top: 100px; /* más espacio si header/nav son más altos en móvil */
   }
 
   .nav-container {
