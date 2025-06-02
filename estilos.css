@@ -10,7 +10,7 @@ body {
   background: #f8f9fa;
   color: #333;
   line-height: 1.6;
-  padding-top: 180px; /* Altura combinada del header + nav */
+  padding-top: 97px; /* espacio para header + nav */
 }
 
 /* ENCABEZADO */
@@ -19,12 +19,10 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 120px;
   background-color: #fff;
   z-index: 1000;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   border-bottom: 1px solid #ccc;
-  text-align: center;
 }
 
 .encabezado-logos {
@@ -33,39 +31,34 @@ header {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  height: 100%;
 }
 
 .logo-jornadas,
 .logo-institucionales {
-  max-width: 100%;
+  max-height: 80px;
   height: auto;
+  width: auto;
   object-fit: contain;
-}
-
-section {
-  scroll-margin-top: 200px; /* evita que el nav fijo tape la sección */
 }
 
 /* NAVEGACIÓN */
 nav {
   position: fixed;
-  top: 120px; /* Debajo del header */
+  top: auto;
   width: 100%;
-  height: 60px;
   background: #005a8d;
   color: white;
   z-index: 999;
+  padding: 0.5rem 1rem;
 }
 
 .nav-container {
   max-width: 960px;
-  height: 100%;
   margin: auto;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1rem;
 }
 
 .nav-menu {
@@ -99,6 +92,7 @@ main {
 section {
   margin-bottom: 2rem;
   padding: 1rem;
+  scroll-margin-top: 130px; /* evita que el nav fijo tape la sección */
 }
 
 h2 {
@@ -136,54 +130,6 @@ footer {
   color: white;
 }
 
-/* RESPONSIVO */
-@media (max-width: 768px) {
-  .nav-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav-menu {
-    flex-direction: column;
-    align-items: flex-start;
-	gap: 0.5rem; /* <- reduce el espacio vertical */
-  }
-  
-    .nav-menu li {
-    line-height: 1.2; /* <- controla interlineado */
-    margin-bottom: 0.2rem; /* <- opcional, menor margen */
-  }
-
-  .nav-menu a,
-  .nav-menu select {
-    font-size: 1rem;
-    padding: 0.25rem 0; /* <- elimina relleno vertical excesivo */
-  }
-
-   .encabezado-logos {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0 1rem;
-  }
-
-  .logo-jornadas,
-  .logo-institucionales {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
-	
-  nav {
-    height: auto;
-    padding: 0.5rem 0;
-  }
-
-  body {
-    padding-top: 240px; /* Más espacio en móviles por contenido vertical */
-  }
-}
-
 /* TARJETAS DE PONENTES */
 .grid-container {
   display: grid;
@@ -218,23 +164,43 @@ footer {
   text-decoration: underline;
 }
 
-/* Ajuste para evitar superposición con menú fijo */
-section {
-  scroll-margin-top: 200px;
-}
-
-/* Ajuste general del body para compensar header+nav */
-body {
-  padding-top: 200px;
-}
-
-/* Aumentar margen superior en móviles si header/nav crecen */
+/* RESPONSIVO */
 @media (max-width: 768px) {
-  section {
-    scroll-margin-top: 240px;
+  body {
+    padding-top: 240px; /* más espacio si header/nav son más altos en móvil */
   }
 
-  body {
-    padding-top: 240px;
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .nav-menu li {
+    line-height: 1.2;
+    margin-bottom: 0.2rem;
+  }
+
+  .nav-menu a,
+  .nav-menu select {
+    font-size: 1rem;
+    padding: 0.25rem 0;
+  }
+
+  .encabezado-logos {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .logo-jornadas,
+  .logo-institucionales {
+    max-width: 90%;
+    max-height: 60px;
   }
 }
