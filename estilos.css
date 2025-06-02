@@ -169,8 +169,9 @@ footer {
 
   .logo-jornadas,
   .logo-institucionales {
-    width: 80%; /* Escala con respecto al contenedor */
-    max-width: 300px; /* Opcional para limitar tamaño máximo */
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 	
   nav {
