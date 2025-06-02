@@ -163,9 +163,12 @@ footer {
     flex-direction: column;
   }
 
-  .logo-jornadas, .logo-institucionales {
-    width: 90%;
-  }
+  .logo-jornadas,
+  .logo-institucionales {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+	}
 
   nav {
     height: auto;
