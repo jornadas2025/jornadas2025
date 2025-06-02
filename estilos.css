@@ -145,7 +145,7 @@ footer {
   .nav-menu {
     flex-direction: column;
     align-items: flex-start;
-	gap: 0.5rem; /* <- reduce el espacio vertical */
+    gap: 0.5rem; /* <- reduce el espacio vertical */
   }
   
     .nav-menu li {
@@ -173,7 +173,7 @@ footer {
   }
 
   body {
-    padding-top: 220px; /* Más espacio en móviles por contenido vertical */
+    padding-top: 240px; /* Más espacio en móviles por contenido vertical */
   }
 }
 
