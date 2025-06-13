@@ -2,13 +2,14 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  padding-top: 140px; /* Compensar header + nav fijos */
+  padding-top: 160px; /* Compensar header + nav fijos */
 }
 
 header {
   position: fixed;
   top: 0;
-  width: 100%;
+  left:0;
+  right:0;
   background: white;
   height: 80px;
   display: flex;
@@ -22,7 +23,8 @@ header {
 nav {
     position: fixed;
     top: 120px;
-    width: 100%;
+    left:0;
+    right:0;
     height: 80px;
     background: #005a8d;
     display: flex;
@@ -61,6 +63,12 @@ a {
 }
 
 /* ENCABEZADO */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .encabezado-logos {
   display: flex;
   flex-wrap: wrap;
@@ -120,7 +128,7 @@ footer {
 }
 
 /* Estilos para tablets y dispositivos más grandes */
-@media (min-width: 481px) {
+@media (min-width: 576px) {
   body {
     padding-top: 180px; /* Ajustar para header y nav más altos */
   }
