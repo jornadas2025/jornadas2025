@@ -54,11 +54,21 @@ h2 {
   color: #004080;
 }
 
+h3 {
+  color: #7e0a02;
+}
+
 a {
   text-decoration: none;
 }
 
- li {
+p {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  color: #9ab7c5;
+}
+
+li {
     line-height: 1.8; /*  Aumenta el interlineado a 1.8 veces el tamaño de la fuente.  */
 }
 
@@ -128,6 +138,34 @@ footer {
 }
 
 /* Estilos responsivo */
+@media (min-width: 360px) {
+  body {
+    padding-top: 180px; /* Ajustar para header y nav más altos */
+  }
+
+  header {
+    height: 100px;
+    padding: .5rem;
+  }
+
+  nav {
+    top: 100px;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 0.3rem;
+  }
+
+  section {
+    padding: 1rem;
+  }
+
+  .logo-jornadas,
+  .logo-institucionales {
+    max-height: 40px;
+  }
+}
+
+
 @media (min-width: 480px) {
   body {
     padding-top: 180px; /* Ajustar para header y nav más altos */
